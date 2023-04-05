@@ -24,6 +24,11 @@ My directory:
 ```
 ### ----------------------
 
+##static folder:
+logo.png - a basic placeholder logo
+
+### ----------------------
+
 ## pages.py: where I define all of my flask routes
 ```
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
