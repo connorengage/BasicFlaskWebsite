@@ -22,9 +22,9 @@ My directory:
     ├── team.html
     └── contact.html
 ```
-##----------------------##
+###----------------------
 
-##pages.py: where I define all of my flask routes##
+##pages.py: where I define all of my flask routes
 ```
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
 
@@ -55,7 +55,7 @@ def contact():
     return render_template("contact.html")
 ```
 
-##app.py:##---
+##app.py:---
 ```
 from flask import Flask
 from pages import pages
@@ -66,11 +66,11 @@ app.register_blueprint(pages, url_prefix="/")
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
 ```
-##----------------------##
+##----------------------
 
 **Inside the templates folder my HTML:**
 
-##base.html: the banner##---
+##base.html: the banner---
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -122,7 +122,7 @@ if __name__ == '__main__':
 </html>
 ```
 
-##home.html:##---
+##home.html:---
 ```
 {% extends "base.html" %}
 
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 {% endblock %}
 ```
 
-##page1.html:##---
+##page1.html:---
 ```
 {% extends "base.html" %}
 
@@ -145,7 +145,7 @@ if __name__ == '__main__':
 {% endblock %}
 ```
 
-##page2.html:##---
+##page2.html:---
 ```
 {% extends "base.html" %}
 
@@ -157,7 +157,7 @@ if __name__ == '__main__':
 {% endblock %}
 ```
 
-##team.html:##---
+##team.html:---
 ```
 {% extends "base.html" %}
 
@@ -169,7 +169,7 @@ if __name__ == '__main__':
 {% endblock %}
 ```
 
-##contact.html:##---
+##contact.html:---
 ```
 {% extends "base.html" %}
 
@@ -180,4 +180,4 @@ if __name__ == '__main__':
     <h1>Contact us:</h1>
 {% endblock %}
 ```
-##----------------------##
+##----------------------
