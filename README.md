@@ -2,7 +2,7 @@
 
 I have imported Flask, and use pipenv for the virtual enviornment. Chose Python 3.11 code interpreter.
 
-{{
+
 My directory:
 .
 ├── Pipfile
@@ -20,7 +20,7 @@ My directory:
     ├── page2.html
     ├── team.html
     └── contact.html
-}}
+
 ##pages.py: where I define all of my flask routes
 
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
