@@ -24,7 +24,7 @@ My directory:
 ```
 ### ----------------------
 
-##static folder:
+## static folder:
 logo.png - a basic placeholder logo
 
 ### ----------------------
