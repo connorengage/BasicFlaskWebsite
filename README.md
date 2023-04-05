@@ -3,7 +3,7 @@
 I have imported Flask, and use pipenv for the virtual enviornment. Chose Python 3.11 code interpreter.
 
 
-        }
+```
 My directory:
 .
 ├── Pipfile
@@ -21,10 +21,11 @@ My directory:
     ├── page2.html
     ├── team.html
     └── contact.html
+```
+##----------------------##
 
-        }
-##pages.py: where I define all of my flask routes
-
+##pages.py: where I define all of my flask routes##
+```
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
 
 pages = Blueprint("pages", __name__)
@@ -52,9 +53,10 @@ def team():
 @pages.route("/contact")
 def contact():
     return render_template("contact.html")
+```
 
-##app.py:
-
+##app.py:##---
+```
 from flask import Flask
 from pages import pages
 
@@ -63,12 +65,13 @@ app = Flask(__name__)
 app.register_blueprint(pages, url_prefix="/")
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
-
+```
+##----------------------##
 
 **Inside the templates folder my HTML:**
 
 ##base.html: the banner##---
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,10 +120,10 @@ if __name__ == '__main__':
     {% endblock %}
 </body>
 </html>
-
+```
 
 ##home.html:##---
-
+```
 {% extends "base.html" %}
 
 {% block title %}Home{% endblock %}
@@ -128,10 +131,10 @@ if __name__ == '__main__':
 {% block content %}
     <h1>Company</h1>
 {% endblock %}
-
+```
 
 ##page1.html:##---
-
+```
 {% extends "base.html" %}
 
 {% block title %}Page 1{% endblock %}
@@ -140,10 +143,10 @@ if __name__ == '__main__':
     <h1>Company</h1>
     <h1>PAGE 1</h1>
 {% endblock %}
-
+```
 
 ##page2.html:##---
-
+```
 {% extends "base.html" %}
 
 {% block title %}Page 2{% endblock %}
@@ -152,10 +155,10 @@ if __name__ == '__main__':
     <h1>Company</h1>
     <h1>PAGE 2</h1>
 {% endblock %}
-
+```
 
 ##team.html:##---
-
+```
 {% extends "base.html" %}
 
 {% block title %}Team{% endblock %}
@@ -164,10 +167,10 @@ if __name__ == '__main__':
     <h1>Company</h1>
     <h1>Meet the team:</h1>
 {% endblock %}
-
+```
 
 ##contact.html:##---
-
+```
 {% extends "base.html" %}
 
 {% block title %}Contact{% endblock %}
@@ -176,5 +179,5 @@ if __name__ == '__main__':
     <h1>Company</h1>
     <h1>Contact us:</h1>
 {% endblock %}
-
-------------
+```
+##----------------------##
