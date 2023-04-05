@@ -1,6 +1,6 @@
 **Basic Python/Flask website template with a HTML banner for navigating pages.**
 
-I have imported Flask, and use pipenv for the virtual enviornment. Chose Python 3.11 code interpreter.
+I have imported Flask, and use pipenv for the virtual enviornment. Chose Python 3.11.2 code interpreter.
 
 
 ```
